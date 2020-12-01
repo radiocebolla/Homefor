@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>gulp-scss-starter</title>
+        <title>Homefor</title>
         <meta name="theme-color" content="#fff">
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -23,16 +23,147 @@
         <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
         <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
         <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+        <link href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
         <link rel="stylesheet" href="styles/main.css">
     </head>
     <body>
         @@include("../blocks/modules/header/header.html")
-        <header>
-            <nav></nav>
-        </header>
-        <main></main>
-        <footer></footer>
+        <main>
+
+            <section class="section-filter">
+                <div class="wrapper">
+                    <div class="dropdown-first">
+
+                        <div class="dropdown">
+                            <button class="btn my-btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Тип объекта
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Загородные дома</a>
+                                <a class="dropdown-item" href="#">Городские квартиры</a>
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                            <button class="btn my-btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Район
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div>
+                        <form>
+                            <label class="filter">
+                                <span class="filter__characteristics">Площадь</span>
+                                <input class="filter__input" type="text" name="measure" id="measure" placeholder="м2">
+                            </label>
+                            <label class="filter">
+                                <span class="filter__characteristics">Цена за м2</span>
+                                <input class="filter__input" type="text" name="price" id="price" placeholder="тыс.">
+                            </label>
+                        </form>
+                    </div>
+
+                    <div class="filter-slide">
+                        <div class="slidecontainer">
+                            <input type="range" min="0" max="1000" value="120" class="firstSlider" id="myRange">
+                            <p><span id="demo"></span></p>
+                        </div>
+                        <div class="slidecontainer">
+                            <input type="range" min="0" max="98000" value="10350" class="secondSlider" id="myRange">
+                            <p><span id="demo"></span></p>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-do">
+                        <button class="reset-btn">Сбросить фильтры<span class="close"></span></button>
+                        <button class="show-btn">Показать</button>
+                    </div>
+
+                </div>
+            </section>
+            <section class="section-country">
+                <div class="wrapper">
+                        <h2 class="title">Загородные дома</h2>
+                        <p>Наши дома расположились в уютных районах Екатеринбурга: Верх-Исетский район, Железнодорожный район, Чкаловский район.</p>
+                    <input class="section-country__input" type="range" id="range" min="1" value="1" step="1" />
+                    <div id="slider">
+                        <div class="slide">
+                            <div class="slider-child slider-cowberry">
+                            </div>
+                            <div class="slider-item"></div>
+                        </div>
+                        <div class="slide">
+                            <div class="slider-child slider-trand"></div>
+                            <div class="slider-item"></div>
+                        </div>
+                        <div class="slide">
+                            <div class="slider-child slider-panorama"></div>
+                            <div class="slider-item"></div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </section>
+            <section class="section-city"></section>
+            <section class="section-plan"></section>
+            <section class="section-about"></section>
+            <section class="section-news"></section>
+            
+        </main>
         @@include("../blocks/modules/footer/footer.html")
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>  
+
+        <script>
+            var firstSlider = document.getElementById("myRange");
+            var output = document.getElementById("demo");
+            output.innerHTML = firstSlider.value; // Display the default slider value
+
+            // Update the current slider value (each time you drag the slider handle)
+            firstSlider.oninput = function() {
+                output.innerHTML = this.value;
+            }
+
+            var secondSlider = document.getElementById("myRange");
+            var output = document.getElementById("demo");
+            output.innerHTML = secondSlider.value; // Display the default slider value
+
+            // Update the current slider value (each time you drag the slider handle)
+            secondSlider.oninput = function() {
+                output.innerHTML = this.value;
+            }
+        </script>
+
+        <script>
+            $('#slider').on('init reInit',function(event,slick){
+            var amount = slick.slideCount;
+            $('#range').attr('max',amount);
+            })
+
+            $('#slider').on('afterChange',function(e,slick,currentSlide){
+            $('#range').val(currentSlide+1);
+            })
+
+            $('#range').on('input change',function(){
+            $('#slider').slick('slickGoTo',this.value-1);
+            });
+
+            $('#slider').slick({
+            slidesToShow:3,
+            arrows:false,
+            dots:false
+            })
+        </script>
         <script src="js/main.js"></script>
         <script src="js/vendor.js"></script>
     </body>

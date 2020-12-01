@@ -5,3 +5,261 @@
 @import "base/fonts";
 @import "base/general";
 @import "../blocks/modules";
+
+
+body {
+    font-family: $font;
+    font-size: $base-font-size;
+    color: $bg-color;
+    background-color: $bg-color;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+
+
+.section-filter {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    text-align: center;
+    font-size: $base-font-size;
+    font-weight: 400;
+    color: $color-primary;
+} 
+
+p {
+    color: #000000;
+}
+
+.dropdown-first {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.filter {
+    &__characteristics {
+        color: $color-primary;
+        border: 1px solid $color-primary;
+        padding: 20px 85px;
+        &:last-child {
+            padding: 20px 78px;
+        }
+    }
+    &-slide {
+        display: flex;
+    }
+    &__input {
+        width: 245px;
+        height: 61px;
+        border: 1px solid $color-primary;
+        margin-left: -4px;
+    }
+}
+
+.my-btn {
+    border: 1px solid $color-primary;
+    border-radius: 0;
+    width: 320px;
+    height: 60px;
+}
+
+/*filter*/
+
+.slidecontainer {
+    width: 100%; /* Width of the outside container */
+}
+
+/* The slider itself */
+.firstSlider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 30%; /* Full-width */
+    height: 1px; /* Specified height */
+    background: #d3d3d3; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.firstSlider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.firstSlider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 6px; /* Set a specific slider handle width */
+    height: 6px; /* Slider handle height */
+    background: #000000; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+.firstSlider::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #4CAF50; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+/* The slider itself */
+.secondSlider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 30%; /* Full-width */
+    height: 1px; /* Specified height */
+    background: #d3d3d3; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.secondSlider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.secondSlider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 6px; /* Set a specific slider handle width */
+    height: 6px; /* Slider handle height */
+    background: #000000; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+.secondSlider::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #4CAF50; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+
+
+
+.reset-btn {
+    background-color: transparent;
+    color: $color-primary;
+    border: none;
+    transition: 0.2s ease;
+    &:hover {
+        color: $color-secondary
+    }
+}
+
+
+
+.close {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 32px;
+    height: 32px;
+    opacity: 0.3;
+}
+.close:hover {
+    opacity: 1;
+}
+.close:before, .close:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 15px;
+    width: 2px;
+    background-color: #333;
+}
+.close:before {
+    transform: rotate(45deg);
+}
+.close:after {
+    transform: rotate(-45deg);
+}
+
+.show-btn {
+    background-color: $color-primary;
+    color: $bg-color;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: none;
+    padding: 1.3rem 3.1rem;
+    letter-spacing: 0.3rem;
+    transition: 0.2s ease;
+    &:hover {
+        background-color: $color-secondary;
+        color: $bg-color;
+    }
+}
+
+
+
+
+.title {
+    font-size: $font-size-h2;
+    color: $color-primary;
+}
+
+.section-country {
+    text-align: center;
+    padding-bottom: 200px;
+    &__input {
+        width: 100%;
+        height: 1px;
+        background-color: $color-roller;
+    }
+}
+
+.slider {
+    &-child {
+        box-sizing: border-box;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        min-height: 520px;
+        position: relative;
+    }
+    &-cowberry {
+        background-image: url(../img/cowberry.png);
+    }
+    &-trand {
+        background-image: url(../img/trand.png);
+    }
+    &-panorama {
+        background-image: url(../img/panorama.png);
+    }
+}
+  
+.slide{
+    height:100%;
+    line-height:100px;
+    border:1px solid;
+    text-align:center;
+    font-size:60px;
+    margin:0 5px;
+}
+
+.slick-list{
+    margin:0 -5px;
+}
+
+.slick-current{
+    color:red;
+}
+
+.slick-slide {
+    border: 1px solid black;
+}
+
