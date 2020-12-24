@@ -25,6 +25,7 @@
         <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
         <link href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" rel="stylesheet"/>
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
@@ -60,29 +61,52 @@
                     </div>
 
                     <div>
-                        <form>
+                        <form class="form">
                             <label class="filter">
                                 <span class="filter__characteristics">Площадь</span>
-                                <input class="filter__input" type="text" name="measure" id="measure" placeholder="м2">
+                                <div class="filter__box">
+                                    <input class="filter__input" type="text" name="measure" id="measure">
+                                    <span class="filter__measure">м2</span>
+                                </div>
                             </label>
                             <label class="filter">
                                 <span class="filter__characteristics">Цена за м2</span>
-                                <input class="filter__input" type="text" name="price" id="price" placeholder="тыс.">
+                                <div class="filter__box">
+                                   <input class="filter__input" type="text" name="price" id="price">
+                                   <span class="filter__measure">тыс.</span>
+                                </div>
                             </label>
                         </form>
                     </div>
 
                     <div class="filter-slide">
-                        <div class="slidecontainer">
-                            <input type="range" min="0" max="1000" value="120" class="firstSlider" id="myRange1">
-                            <p><span id="demo1"></span></p>
+                        <div class="filter-item"> 
+                            <div id="slider-range"></div>
+                            <input type="text" id="amount" class="filter-text">
                         </div>
-                        <div class="slidecontainer">
-                            <input type="range" min="0" max="98000" value="10350" class="secondSlider" id="myRange2">
-                            <p><span id="demo2"></span></p>
+                        <div class="filter-item">
+                            <div id="slider-range-two"></div>
+                            <input type="text-two" id="amount-two" class="filter-text-two">
                         </div>
+
                     </div>
                     
+                <!--    <div>
+                        <div class="slidecontainer">
+                            <input type="range" min="0" max="1000" value="120" class="firstSlider" id="myRangeone">
+                            <p><span id="demoone"></span></p>
+                        </div>
+                        <div class="slidecontainer">
+                            <input type="range" min="0" max="98000" value="10350" class="secondSlider" id="myRangetwo">
+                            <p><span id="demotwo"></span></p>
+                        </div>
+
+                        <div class="container">
+                            <input type="range" min="0" step="1" max="1000" value="0" class="oneslide">
+                            <input type="range" min="0" step="1" max="1000" value="120" class="twoslide">
+                        </div>
+                    </div>-->
+
                     <div class="filter-do">
                         <button class="reset-btn">Сбросить фильтры<span class="close"></span></button>
                         <button class="show-btn">Показать</button>
@@ -93,22 +117,108 @@
             <section class="section-country">
                 <div class="wrapper">
                         <h2 class="title">Загородные дома</h2>
-                        <p class="section-country__despription">Наши дома расположились в уютных районах Екатеринбурга:<br>Верх-Исетский район, Железнодорожный район, Чкаловский район.</p>
+                        <p class="section-country__description">Наши дома расположились в уютных районах Екатеринбурга:<br>Верх-Исетский район, Железнодорожный район, Чкаловский район.</p>
                         <div class="content">
                             <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
                             <div class="slider">
-                                <div class="slide">
-                                    <div class="slider-child slider-cowberry"></div>
-                                    <div class="slider-item"></div>
+                                <div class="slider-child">
+                                    <div class="slider-item">
+                                        <div class="slider-thumb slider-cowberry">
+                                            <h3 class="slider-thumb__title">Дом  “Брусника”</h3>
+                                            <p class="slider-thumb__address">ул. Карла Маркса, 60, Екатеринбург</p>
+                                            <button class="slider-thumb__button like-btn" type="button"></button>
+                                        </div>
+                                        <div class="slider-footer">
+                                            <ul class="slider-footer__features">
+                                                <li class="features-icon__metres">200 м2</li>
+                                                <li class="features-icon__area">10 сот</li>
+                                                <li class="features-icon__paint">с отделкой</li>
+                                            </ul>
+                                            <p class="slider-footer__price">7 005 456 500 ₽</p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="slide">
-                                    <div class="slider-child slider-trand"></div>
-                                    <div class="slider-item"></div>
+                                <div class="slider-child">
+                                    <div class="slider-item">
+                                        <div class="slider-thumb slider-trand">
+                                            <h3 class="slider-thumb__title">Дом  “Трендис”</h3>
+                                            <p class="slider-thumb__address">ул. Урицкого, 13, Екатеринбург</p>
+                                        </div>
+                                        <div class="slider-footer">
+                                            <ul class="slider-footer__features">
+                                                <li class="features-item">500 м2</li>
+                                                <li class="features-item">12 сот</li>
+                                                <li class="features-item">с отделкой</li>
+                                            </ul>
+                                            <p class="slider-footer__price">10 000 234 500 ₽</p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="slide">
-                                    <div class="slider-child slider-panorama"></div>
-                                    <div class="slider-item"></div>
+                                <div class="slider-child">
+                                    <div class="slider-item">
+                                        <div class="slider-thumb slider-panorama">
+                                            <h3 class="slider-thumb__title">Дома  “Панорама”</h3>
+                                            <p class="slider-thumb__address">ул. Толстого, 340, Екатеринбург</p>
+                                        </div>
+                                        <div class="slider-footer">
+                                            <ul class="slider-footer__features">
+                                                <li class="features-item">150 м2</li>
+                                                <li class="features-item">13 сот</li>
+                                                <li class="features-item">с отделкой</li>
+                                            </ul>
+                                            <p class="slider-footer__price">5 045 000 500 ₽</p>
+                                        </div>
+                                    </div>
                                 </div>
+                                <div class="slider-child">
+                                    <div class="slider-item">
+                                        <div class="slider-thumb slider-cowberry">
+                                            <h3 class="slider-thumb__title">Дом  “Брусника”</h3>
+                                            <p class="slider-thumb__address">ул. Карла Маркса, 60, Екатеринбург</p>
+                                        </div>
+                                        <div class="slider-footer">
+                                            <ul class="slider-footer__features">
+                                                <li class="features-item">200 м2</li>
+                                                <li class="features-item">10 сот</li>
+                                                <li class="features-item">с отделкой</li>
+                                            </ul>
+                                            <p class="slider-footer__price">7 005 456 500 ₽</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slider-child">
+                                    <div class="slider-item">
+                                        <div class="slider-thumb slider-trand">
+                                            <h3 class="slider-thumb__title">Дом  “Трендис”</h3>
+                                            <p class="slider-thumb__address">ул. Урицкого, 13, Екатеринбург</p>
+                                        </div>
+                                        <div class="slider-footer">
+                                            <ul class="slider-footer__features">
+                                                <li class="features-item">500 м2</li>
+                                                <li class="features-item">12 сот</li>
+                                                <li class="features-item">с отделкой</li>
+                                            </ul>
+                                            <p class="slider-footer__price">10 000 234 500 ₽</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slider-child">
+                                    <div class="slider-item">
+                                        <div class="slider-thumb slider-panorama">
+                                            <h3 class="slider-thumb__title">Дома  “Панорама”</h3>
+                                            <p class="slider-thumb__address">ул. Толстого, 340, Екатеринбург</p>
+                                        </div>
+                                        <div class="slider-footer">
+                                            <ul class="slider-footer__features">
+                                                <li class="features-item">150 м2</li>
+                                                <li class="features-item">13 сот</li>
+                                                <li class="features-item">с отделкой</li>
+                                            </ul>
+                                            <p class="slider-footer__price">5 045 000 500 ₽</p>
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <span class="slider__label sr-only"></span>
                             </div>
                         </div> 
@@ -121,10 +231,129 @@
                     
                 </div>
             </section>
-            <section class="section-city"></section>
+            <section class="section-city">
+                <div class="wrapper">
+                    <h2 class="title">Городские квартиры</h2>
+                    <p class="section-country__description">В каталоге квартир вы найдете актуальные планировки и цены.<br>Это те квартиры, которые есть в продаже сейчас.</p>
+                    <div class="catalog">
+                        <div class="catalog-item">
+                            <div class="catalog-thumb">
+                                <img class="catalog-thumb__image" src="../img/catalog/jukovka.png" alt="жуковка">
+                            </div>
+                            <div class="catalog-info">
+                                <h3 class="catalog-info__title">Молоко топленое</h3>
+                                <p class="catalog-info__description">Молоко Healthy food топленое<br>мдж 4%	500гр</p>
+                                <p class="catalog-info__price">159 руб/шт</p>
+                                <div class="catalog-footer">
+                                    <div class="catalog-count">
+                                        <span class="catalog-count__minus"></span>
+                                        <input class="catalog-count__number" type="text" value="1"/>
+                                        <span class="catalog-count__plus"></span>
+                                    </div>
+                                    <button class="btn catalog-footer__btn">в корзину</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog-item">
+                            <div class="catalog-thumb">
+                                <img class="catalog-thumb__image" src="../img/catalog/parashute.png" alt="парашют">
+                            </div>
+                            <div class="catalog-info">
+                                <h3 class="catalog-info__title">Йогурт с черникой</h3>
+                                <p class="catalog-info__description">Йогурт Healthy food  с черникой, питьевой 1,5%, 750 г</p>
+                                <p class="catalog-info__price">89 руб/шт</p>
+                                <div class="catalog-footer">
+                                    <div class="catalog-count">
+                                        <span class="catalog-count__minus"></span>
+                                        <input class="catalog-count__number" type="text" value="1"/>
+                                        <span class="catalog-count__plus"></span>
+                                    </div>
+                                    <button class="btn catalog-footer__btn">в корзину</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog-item">
+                            <div class="catalog-thumb">
+                                <img class="catalog-thumb__image" src="../img/catalog/vesna.png" alt="весна">
+                            </div>
+                            <div class="catalog-info">
+                                <h3 class="catalog-info__title">Творог</h3>
+                                <p class="catalog-info__description">Творог Healthy food Рассыпчатый<br>9% 350 г
+                                </p>
+                                <p class="catalog-info__price">216 руб/шт</p>
+                                <div class="catalog-footer">
+                                    <div class="catalog-count">
+                                        <span class="catalog-count__minus"></span>
+                                        <input class="catalog-count__number" type="text" value="1"/>
+                                        <span class="catalog-count__plus"></span>
+                                    </div>
+                                    <button class="btn catalog-footer__btn">в корзину</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog-item">
+                            <div class="catalog-thumb">
+                                <img class="catalog-thumb__image" src="../img/catalog/pioner.png" alt="пионер">
+                            </div>
+                            <div class="catalog-info">
+                                <h3 class="catalog-info__title">Моцарелла</h3>
+                                <p class="catalog-info__description">Моцарелла Healthy food<br>45%, 0.125 кг</p>
+                                <p class="catalog-info__price">359 руб/шт</p>
+                                <div class="catalog-footer">
+                                    <div class="catalog-count">
+                                        <span class="catalog-count__minus"></span>
+                                        <input class="catalog-count__number" type="text" value="1"/>
+                                        <span class="catalog-count__plus"></span>
+                                    </div>
+                                    <button class="btn catalog-footer__btn">в корзину</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog-item">
+                            <div class="catalog-thumb">
+                                <img class="catalog-thumb__image" src="../img/catalog/manch.png" alt="манхеттен">
+                            </div>
+                            <div class="catalog-info">
+                                <h3 class="catalog-info__title">Масло сливочное</h3>
+                                <p class="catalog-info__description">Масло Healthy food сливочное<br>82,5%, 200г</p>
+                                <p class="catalog-info__price">139 руб/шт</p>
+                                <div class="catalog-footer">
+                                    <div class="catalog-count">
+                                        <span class="catalog-count__minus"></span>
+                                        <input class="catalog-count__number" type="text" value="1"/>
+                                        <span class="catalog-count__plus"></span>
+                                    </div>
+                                    <button class="btn catalog-footer__btn">в корзину</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog-item">
+                            <div class="catalog-thumb">
+                                <img class="catalog-thumb__image" src="../img/catalog/friendship.png" alt="дружба">
+                            </div>
+                            <div class="catalog-info">
+                                <h3 class="catalog-info__title">Йогурт термостатный</h3>
+                                <p class="catalog-info__description">Йогурт Healthy food термостатный&nbsp;с фруктово-ягодным 2,5 %, 165 г</p>
+                                <p class="catalog-info__price">159 руб/шт</p>
+                                <div class="catalog-footer">
+                                    <div class="catalog-count">
+                                        <span class="catalog-count__minus"></span>
+                                        <input class="catalog-count__number" type="text" value="1"/>
+                                        <span class="catalog-count__plus"></span>
+                                    </div>
+                                    <button class="btn catalog-footer__btn">в корзину</button>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                    <button class="btn-load">Смотреть больше</button>
+            </div>
+            </section>
             <section class="section-plan">
                 <h2 class="title">Генплан</h2>
-                <p>На генплане вы можете посмотреть территорию покупки. В поселке все предусмотрено.<br>Здесь проведены необходимые коммуникации.Это место влюбляет в себя.</p>
+                <p class="text-plan">На генплане вы можете посмотреть территорию покупки. В поселке все предусмотрено.<br>Здесь проведены необходимые коммуникации.Это место влюбляет в себя.</p>
+                
+
                 <div class="slider-plan">
                     <div><img src="../img/plan.png" alt=""></div>
                     <div><img src="../img/plan.png" alt=""></div>
@@ -144,34 +373,138 @@
                     </div>
                 </div>
             </section>
-            <section class="section-news"></section>
+            <section class="section-news">
+                <div class="wrapper">
+                    <h2 class="title">Наши новости</h2>
+                    <p class="section-country__description">Узнай новости компании первым. Мы всегда остаемся в тренде.</p>
+                    <div class="content">
+                        <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="slider">
+                            <div class="slider-child__flat">
+                                <div class="slider-item slider-hover">
+                                    <div class="slider-text">
+                                        <p class="slider-text__date">02.04.2020</p>
+                                        <p class="slider-text__news">В 2018 году происходили изменения в главном<br>законе долевого строительства ФЗ-214 для<br>решения сложной задачи – строительства 120<br>млн квадратных метров жилья нового качества<br>и усиления контроля</p>
+                                        <a class="slider-text__link" href="#">Смотреть больше</a>
+                                    </div>
+                                    <div class="slider-flats"><img src="../img/flats.png" alt="квартиры"></div>
+                                </div>
+                            </div>
+                            <div class="slider-child">
+                                <div class="slider-item slider-hover">
+                                    <div class="slider-text">
+                                        <p class="slider-text__date">02.04.2020</p>
+                                        <p class="slider-text__news">В 2018 году происходили изменения в главном<br>законе долевого строительства ФЗ-214 для<br>решения сложной задачи – строительства 120<br>млн квадратных метров жилья нового качества<br>и усиления контроля</p>
+                                        <a class="slider-text__link" href="#">Смотреть больше</a>
+                                    </div>
+                                    <div class="slider-flats"><img src="../img/flats.png" alt="квартиры"></div>
+                                </div>
+                            </div>
+                            <div class="slider-child">
+                                <div class="slider-item slider-hover">
+                                    <div class="slider-text">
+                                        <p class="slider-text__date">02.04.2020</p>
+                                        <p class="slider-text__news">В 2018 году происходили изменения в главном<br>законе долевого строительства ФЗ-214 для<br>решения сложной задачи – строительства 120<br>млн квадратных метров жилья нового качества<br>и усиления контроля</p>
+                                        <a class="slider-text__link" href="#">Смотреть больше</a>
+                                    </div>
+                                    <div class="slider-flats"><img src="../img/flats.png" alt="квартиры"></div>
+                                </div>
+                            </div>
+
+
+                            <span class="slider__label sr-only"></span>
+                        </div>
+                    </div> 
+            </div>
+            </section>
             
         </main>
         @@include("../blocks/modules/footer/footer.html")
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> 
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> 
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> 
 
         <script>
-            var firstSlider = document.getElementById("myRange1");
-            var output = document.getElementById("demo1");
+            $('.hero').slick({
+                arrows:false,
+                dots:true
+            }
+            );
+        </script>
+
+        <script>
+            var firstSlider = document.getElementById("myRangeone");
+            var output = document.getElementById("demoone");
             output.innerHTML = firstSlider.value; // Display the default slider value
 
             // Update the current slider value (each time you drag the slider handle)
             firstSlider.oninput = function() {
                 output.innerHTML = this.value;
             }
-
-            var secondSlider = document.getElementById("myRange2");
-            var output = document.getElementById("demo2");
+            
+            var secondSlider = document.getElementById("myRangetwo");
+            var output = document.getElementById("demotwo");
             output.innerHTML = secondSlider.value; // Display the default slider value
 
             // Update the current slider value (each time you drag the slider handle)
             secondSlider.oninput = function() {
                 output.innerHTML = this.value;
             }
+        </script>
+        <script>
+            const sliders = document.querySelectorAll('input[type="range"]');
+
+            sliders[0].addEventListener('input', (e) => {
+            if(+sliders[0].value > +sliders[1].value){
+                sliders[1].value = +sliders[0].value;
+            }
+            });
+
+            sliders[1].addEventListener('input', (e) => {
+            if(+sliders[1].value < +sliders[0].value){
+                sliders[0].value = +sliders[1].value;
+            }
+            });
+
+            sliders.forEach((slider) => {
+            slider.addEventListener('change', () => {
+                console.log(`from ${sliders[0].value} to ${sliders[1].value}`);
+            })
+            });
+        </script>
+
+        <script>//filter
+              $( function() {
+                $( "#slider-range" ).slider({
+                range: true,
+                min: 0,
+                max: 1000,
+                values: [ 0, 120, ],
+                slide: function( event, ui ) {
+                    $( "#amount" ).val( " " + ui.values[ 0 ] + "                              " + ui.values[ 1 ] );
+                }
+                });
+                $( "#amount" ).val( " " + $( "#slider-range" ).slider( "values", 0 ) +
+                "                              " + $( "#slider-range" ).slider( "values", 1 ) );
+            } );
+
+            $( function() {
+                $( "#slider-range-two" ).slider({
+                range: true,
+                min: 0,
+                max: 98000,
+                values: [ 0, 10350, ],
+                slide: function( event, ui ) {
+                    $( "#amount-two" ).val( " " + ui.values[ 0 ] + "                              " + ui.values[ 1 ] );
+                }
+                });
+                $( "#amount-two" ).val( " " + $( "#slider-range-two" ).slider( "values", 0 ) +
+                "                              " + $( "#slider-range-two" ).slider( "values", 1 ) );
+            } );
         </script>
 
         <script>
@@ -200,7 +533,9 @@
         </script>
         <script>
             $('.slider-plan').slick({
-                arrows:true
+                arrows:true,
+                prevArrow: '<button class="slick-prev slick-arrow" aria-label="Previous" type="button" style="">загородные дома</button>',
+                nextArrow: '<button class="slick-next slick-arrow" aria-label="Next" type="button" style="">городские квартиры</button>',
             }
             );
         </script>

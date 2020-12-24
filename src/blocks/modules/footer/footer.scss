@@ -1,6 +1,6 @@
 .footer {
     border-top: 2px solid #676569;
-    padding-top: 77px;
+    padding-top: 64px;
     padding-bottom: 60px;
     .logo {
         width: 140px;
@@ -13,20 +13,30 @@
     display: flex;
     justify-content: space-between;
     &-item {
-        display: flex;
         justify-content: space-between;
         flex: 0 0 66.4%;
+        &:last-child {
+            display: flex;
+            justify-content: flex-end;
+            flex: 0 0 30.4%;
+            margin: -14px -23px;
+        }
+    }
+    &-nav {
+        display: flex;
     }
 }
 
 .box-footer-list {
     list-style-type: none;
     display: flex;
+    padding-left: 104px;
+    padding-top: 5px;
     &__item {
         margin-bottom: 1.62rem;
         font-size: 1.12rem;
         &:hover {
-            color: black;
+            color: $color-primary;
         }
         &:last-child {
             padding-bottom: 0;
@@ -34,14 +44,22 @@
     }
     &__link {
         text-decoration: none;
-        color: black;
+        color: $color-primary;
+        padding-right: 48px;
+        letter-spacing: -1px;
         &:hover {
             color: black;
         }
     }
     &__tel {
-        font-size: 1.68rem;
+        font-size: $font-size-phone;
+        font-weight: 700;
         margin-bottom: 2.06rem;
+        text-decoration: none;
+        color: $color-primary;
+        &:hover {
+            color: black;
+        }
     }
 }
 
@@ -50,6 +68,7 @@
     justify-content: space-between;
     align-items: center;
     list-style-type: none;
+    margin-top: 67px;
     &__link {
         width: 50px;
         height: 50px;
