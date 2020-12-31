@@ -63,14 +63,14 @@
                     <div>
                         <form class="form">
                             <label class="filter">
-                                <span class="filter__characteristics">Площадь</span>
+                                <span class="filter-characteristics__metres">Площадь</span>
                                 <div class="filter__box">
                                     <input class="filter__input" type="text" name="measure" id="measure">
                                     <span class="filter__measure">м2</span>
                                 </div>
                             </label>
                             <label class="filter">
-                                <span class="filter__characteristics">Цена за м2</span>
+                                <span class="filter-characteristics__price">Цена за м2</span>
                                 <div class="filter__box">
                                    <input class="filter__input" type="text" name="price" id="price">
                                    <span class="filter__measure">тыс.</span>
@@ -84,11 +84,12 @@
                             <div id="slider-range"></div>
                             <input type="text" id="amount" class="filter-text">
                         </div>
+                        <span class="filter-max">1000</span>
                         <div class="filter-item">
                             <div id="slider-range-two"></div>
                             <input type="text-two" id="amount-two" class="filter-text-two">
                         </div>
-
+                        <span class="filter-max">98000</span>
                     </div>
                     
                 <!--    <div>
@@ -124,9 +125,11 @@
                                 <div class="slider-child">
                                     <div class="slider-item">
                                         <div class="slider-thumb slider-cowberry">
-                                            <h3 class="slider-thumb__title">Дом  “Брусника”</h3>
-                                            <p class="slider-thumb__address">ул. Карла Маркса, 60, Екатеринбург</p>
-                                            <button class="slider-thumb__button like-btn" type="button"></button>
+                                            <h3 class="slider-thumb__title">Дом “Брусника”</h3>
+                                            <div class="slider-thumb__description">
+                                                <p class="slider-thumb__address">ул. Карла Маркса, 60, Екатеринбург</p>
+                                                <button class="slider-thumb__button" type="button"></button>
+                                            </div>
                                         </div>
                                         <div class="slider-footer">
                                             <ul class="slider-footer__features">
@@ -142,13 +145,16 @@
                                     <div class="slider-item">
                                         <div class="slider-thumb slider-trand">
                                             <h3 class="slider-thumb__title">Дом  “Трендис”</h3>
-                                            <p class="slider-thumb__address">ул. Урицкого, 13, Екатеринбург</p>
+                                            <div class="slider-thumb__description">
+                                                <p class="slider-thumb__address">ул. Урицкого, 13, Екатеринбург</p>
+                                                <button class="slider-thumb__button" type="button"></button>
+                                            </div>
                                         </div>
                                         <div class="slider-footer">
                                             <ul class="slider-footer__features">
-                                                <li class="features-item">500 м2</li>
-                                                <li class="features-item">12 сот</li>
-                                                <li class="features-item">с отделкой</li>
+                                                <li class="features-icon__metres">500 м2</li>
+                                                <li class="features-icon__area">12 сот</li>
+                                                <li class="features-icon__paint">с отделкой</li>
                                             </ul>
                                             <p class="slider-footer__price">10 000 234 500 ₽</p>
                                         </div>
@@ -158,13 +164,16 @@
                                     <div class="slider-item">
                                         <div class="slider-thumb slider-panorama">
                                             <h3 class="slider-thumb__title">Дома  “Панорама”</h3>
-                                            <p class="slider-thumb__address">ул. Толстого, 340, Екатеринбург</p>
+                                            <div class="slider-thumb__description">
+                                                <p class="slider-thumb__address">ул. Толстого, 340, Екатеринбург</p>
+                                                <button class="slider-thumb__button" type="button"></button>
+                                            </div>
                                         </div>
                                         <div class="slider-footer">
                                             <ul class="slider-footer__features">
-                                                <li class="features-item">150 м2</li>
-                                                <li class="features-item">13 сот</li>
-                                                <li class="features-item">с отделкой</li>
+                                                <li class="features-icon__metres">150 м2</li>
+                                                <li class="features-icon__area">13 сот</li>
+                                                <li class="features-icon__paint">с отделкой</li>
                                             </ul>
                                             <p class="slider-footer__price">5 045 000 500 ₽</p>
                                         </div>
@@ -173,14 +182,17 @@
                                 <div class="slider-child">
                                     <div class="slider-item">
                                         <div class="slider-thumb slider-cowberry">
-                                            <h3 class="slider-thumb__title">Дом  “Брусника”</h3>
-                                            <p class="slider-thumb__address">ул. Карла Маркса, 60, Екатеринбург</p>
+                                            <h3 class="slider-thumb__title">Дом “Брусника”</h3>
+                                            <div class="slider-thumb__description">
+                                                <p class="slider-thumb__address">ул. Карла Маркса, 60, Екатеринбург</p>
+                                                <button class="slider-thumb__button" type="button"></button>
+                                            </div>
                                         </div>
                                         <div class="slider-footer">
                                             <ul class="slider-footer__features">
-                                                <li class="features-item">200 м2</li>
-                                                <li class="features-item">10 сот</li>
-                                                <li class="features-item">с отделкой</li>
+                                                <li class="features-icon__metres">200 м2</li>
+                                                <li class="features-icon__area">10 сот</li>
+                                                <li class="features-icon__paint">с отделкой</li>
                                             </ul>
                                             <p class="slider-footer__price">7 005 456 500 ₽</p>
                                         </div>
@@ -190,13 +202,16 @@
                                     <div class="slider-item">
                                         <div class="slider-thumb slider-trand">
                                             <h3 class="slider-thumb__title">Дом  “Трендис”</h3>
-                                            <p class="slider-thumb__address">ул. Урицкого, 13, Екатеринбург</p>
+                                            <div class="slider-thumb__description">
+                                                <p class="slider-thumb__address">ул. Урицкого, 13, Екатеринбург</p>
+                                                <button class="slider-thumb__button" type="button"></button>
+                                            </div>
                                         </div>
                                         <div class="slider-footer">
                                             <ul class="slider-footer__features">
-                                                <li class="features-item">500 м2</li>
-                                                <li class="features-item">12 сот</li>
-                                                <li class="features-item">с отделкой</li>
+                                                <li class="features-icon__metres">500 м2</li>
+                                                <li class="features-icon__area">12 сот</li>
+                                                <li class="features-icon__paint">с отделкой</li>
                                             </ul>
                                             <p class="slider-footer__price">10 000 234 500 ₽</p>
                                         </div>
@@ -206,18 +221,22 @@
                                     <div class="slider-item">
                                         <div class="slider-thumb slider-panorama">
                                             <h3 class="slider-thumb__title">Дома  “Панорама”</h3>
-                                            <p class="slider-thumb__address">ул. Толстого, 340, Екатеринбург</p>
+                                            <div class="slider-thumb__description">
+                                                <p class="slider-thumb__address">ул. Толстого, 340, Екатеринбург</p>
+                                                <button class="slider-thumb__button" type="button"></button>
+                                            </div>
                                         </div>
                                         <div class="slider-footer">
                                             <ul class="slider-footer__features">
-                                                <li class="features-item">150 м2</li>
-                                                <li class="features-item">13 сот</li>
-                                                <li class="features-item">с отделкой</li>
+                                                <li class="features-icon__metres">150 м2</li>
+                                                <li class="features-icon__area">13 сот</li>
+                                                <li class="features-icon__paint">с отделкой</li>
                                             </ul>
                                             <p class="slider-footer__price">5 045 000 500 ₽</p>
                                         </div>
                                     </div>
                                 </div>
+
 
                                 <span class="slider__label sr-only"></span>
                             </div>
@@ -234,117 +253,116 @@
             <section class="section-city">
                 <div class="wrapper">
                     <h2 class="title">Городские квартиры</h2>
-                    <p class="section-country__description">В каталоге квартир вы найдете актуальные планировки и цены.<br>Это те квартиры, которые есть в продаже сейчас.</p>
+                    <p class="section-city__description">В каталоге квартир вы найдете актуальные планировки и цены.<br>Это те квартиры, которые есть в продаже сейчас.</p>
                     <div class="catalog">
-                        <div class="catalog-item">
-                            <div class="catalog-thumb">
-                                <img class="catalog-thumb__image" src="../img/catalog/jukovka.png" alt="жуковка">
-                            </div>
-                            <div class="catalog-info">
-                                <h3 class="catalog-info__title">Молоко топленое</h3>
-                                <p class="catalog-info__description">Молоко Healthy food топленое<br>мдж 4%	500гр</p>
-                                <p class="catalog-info__price">159 руб/шт</p>
-                                <div class="catalog-footer">
-                                    <div class="catalog-count">
-                                        <span class="catalog-count__minus"></span>
-                                        <input class="catalog-count__number" type="text" value="1"/>
-                                        <span class="catalog-count__plus"></span>
+                        <div class="catalog-child">
+                            <div class="catalog-item">
+                                <div class="catalog-thumb catalog-jukovka">
+                                    <h3 class="catalog-thumb__title">Дом “Жуковка”</h3>
+                                    <div class="catalog-thumb__description">
+                                        <p class="catalog-thumb__address">ул. Карла Маркса, 60, Екатеринбург</p>
+                                        <button class="catalog-thumb__button catalog-thumb__like" type="button"></button>
                                     </div>
-                                    <button class="btn catalog-footer__btn">в корзину</button>
+                                </div>
+                                <div class="catalog-footer">
+                                    <ul class="catalog-footer__features">
+                                        <li class="features-icon__metres">72 м2</li>
+                                        <li class="features-icon__paint">с отделкой</li>
+                                    </ul>
+                                    <p class="catalog-footer__price">3 006 435 500 ₽</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="catalog-item">
-                            <div class="catalog-thumb">
-                                <img class="catalog-thumb__image" src="../img/catalog/parashute.png" alt="парашют">
-                            </div>
-                            <div class="catalog-info">
-                                <h3 class="catalog-info__title">Йогурт с черникой</h3>
-                                <p class="catalog-info__description">Йогурт Healthy food  с черникой, питьевой 1,5%, 750 г</p>
-                                <p class="catalog-info__price">89 руб/шт</p>
-                                <div class="catalog-footer">
-                                    <div class="catalog-count">
-                                        <span class="catalog-count__minus"></span>
-                                        <input class="catalog-count__number" type="text" value="1"/>
-                                        <span class="catalog-count__plus"></span>
+                        <div class="catalog-child">
+                            <div class="catalog-item">
+                                <div class="catalog-thumb catalog-parashute">
+                                    <h3 class="catalog-thumb__title">Дом “Парашют”</h3>
+                                    <div class="catalog-thumb__description">
+                                        <p class="catalog-thumb__address">ул. Зорге, 160, Екатеринбург</p>
+                                        <button class="catalog-thumb__button catalog-thumb__like" type="button"></button>
                                     </div>
-                                    <button class="btn catalog-footer__btn">в корзину</button>
+                                </div>
+                                <div class="catalog-footer">
+                                    <ul class="catalog-footer__features">
+                                        <li class="features-icon__metres">112 м2</li>
+                                        <li class="features-icon__paint">с отделкой</li>
+                                    </ul>
+                                    <p class="catalog-footer__price">5 000 974 500 ₽</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="catalog-item">
-                            <div class="catalog-thumb">
-                                <img class="catalog-thumb__image" src="../img/catalog/vesna.png" alt="весна">
-                            </div>
-                            <div class="catalog-info">
-                                <h3 class="catalog-info__title">Творог</h3>
-                                <p class="catalog-info__description">Творог Healthy food Рассыпчатый<br>9% 350 г
-                                </p>
-                                <p class="catalog-info__price">216 руб/шт</p>
-                                <div class="catalog-footer">
-                                    <div class="catalog-count">
-                                        <span class="catalog-count__minus"></span>
-                                        <input class="catalog-count__number" type="text" value="1"/>
-                                        <span class="catalog-count__plus"></span>
+                        <div class="catalog-child">
+                            <div class="catalog-item">
+                                <div class="catalog-thumb catalog-vesna">
+                                    <h3 class="catalog-thumb__title">Дом “Весна”</h3>
+                                    <div class="catalog-thumb__description">
+                                        <p class="catalog-thumb__address">ул. Заречная, 120, Екатеринбург</p>
+                                        <button class="catalog-thumb__button catalog-thumb__like" type="button"></button>
                                     </div>
-                                    <button class="btn catalog-footer__btn">в корзину</button>
+                                </div>
+                                <div class="catalog-footer">
+                                    <ul class="catalog-footer__features">
+                                        <li class="features-icon__metres">100 м2</li>
+                                        <li class="features-icon__paint">с отделкой</li>
+                                    </ul>
+                                    <p class="catalog-footer__price">6 120 412 500 ₽</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="catalog-item">
-                            <div class="catalog-thumb">
-                                <img class="catalog-thumb__image" src="../img/catalog/pioner.png" alt="пионер">
-                            </div>
-                            <div class="catalog-info">
-                                <h3 class="catalog-info__title">Моцарелла</h3>
-                                <p class="catalog-info__description">Моцарелла Healthy food<br>45%, 0.125 кг</p>
-                                <p class="catalog-info__price">359 руб/шт</p>
-                                <div class="catalog-footer">
-                                    <div class="catalog-count">
-                                        <span class="catalog-count__minus"></span>
-                                        <input class="catalog-count__number" type="text" value="1"/>
-                                        <span class="catalog-count__plus"></span>
+                        <div class="catalog-child">
+                            <div class="catalog-item">
+                                <div class="catalog-thumb catalog-pioner">
+                                    <h3 class="catalog-thumb__title">Дом “Пионер”</h3>
+                                    <div class="catalog-thumb__description">
+                                        <p class="catalog-thumb__address">ул. Карла Маркса, 120, Екатеринбург</p>
+                                        <button class="catalog-thumb__button catalog-thumb__like" type="button"></button>
                                     </div>
-                                    <button class="btn catalog-footer__btn">в корзину</button>
+                                </div>
+                                <div class="catalog-footer">
+                                    <ul class="catalog-footer__features">
+                                        <li class="features-icon__metres">90 м2</li>
+                                        <li class="features-icon__paint">с отделкой</li>
+                                    </ul>
+                                    <p class="catalog-footer__price">3 120 000 500 ₽</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="catalog-item">
-                            <div class="catalog-thumb">
-                                <img class="catalog-thumb__image" src="../img/catalog/manch.png" alt="манхеттен">
-                            </div>
-                            <div class="catalog-info">
-                                <h3 class="catalog-info__title">Масло сливочное</h3>
-                                <p class="catalog-info__description">Масло Healthy food сливочное<br>82,5%, 200г</p>
-                                <p class="catalog-info__price">139 руб/шт</p>
-                                <div class="catalog-footer">
-                                    <div class="catalog-count">
-                                        <span class="catalog-count__minus"></span>
-                                        <input class="catalog-count__number" type="text" value="1"/>
-                                        <span class="catalog-count__plus"></span>
+                        <div class="catalog-child">
+                            <div class="catalog-item">
+                                <div class="catalog-thumb catalog-manch">
+                                    <h3 class="catalog-thumb__title">Дом “Манхеттен”</h3>
+                                    <div class="catalog-thumb__description">
+                                        <p class="catalog-thumb__address">ул. Московская, 10, Екатеринбург</p>
+                                        <button class="catalog-thumb__button catalog-thumb__like" type="button"></button>
                                     </div>
-                                    <button class="btn catalog-footer__btn">в корзину</button>
+                                </div>
+                                <div class="catalog-footer">
+                                    <ul class="catalog-footer__features">
+                                        <li class="features-icon__metres">87 м2</li>
+                                        <li class="features-icon__paint">с отделкой</li>
+                                    </ul>
+                                    <p class="catalog-footer__price">6 000 456 000 ₽</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="catalog-item">
-                            <div class="catalog-thumb">
-                                <img class="catalog-thumb__image" src="../img/catalog/friendship.png" alt="дружба">
-                            </div>
-                            <div class="catalog-info">
-                                <h3 class="catalog-info__title">Йогурт термостатный</h3>
-                                <p class="catalog-info__description">Йогурт Healthy food термостатный&nbsp;с фруктово-ягодным 2,5 %, 165 г</p>
-                                <p class="catalog-info__price">159 руб/шт</p>
-                                <div class="catalog-footer">
-                                    <div class="catalog-count">
-                                        <span class="catalog-count__minus"></span>
-                                        <input class="catalog-count__number" type="text" value="1"/>
-                                        <span class="catalog-count__plus"></span>
+                        <div class="catalog-child">
+                            <div class="catalog-item">
+                                <div class="catalog-thumb catalog-friendship">
+                                    <h3 class="catalog-thumb__title">Дом  “Дружба”</h3>
+                                    <div class="catalog-thumb__description">
+                                        <p class="catalog-thumb__address">ул. Прашина, 60, Екатеринбург</p>
+                                        <button class="catalog-thumb__button catalog-thumb__like" type="button"></button>
                                     </div>
-                                    <button class="btn catalog-footer__btn">в корзину</button>
+                                </div>
+                                <div class="catalog-footer">
+                                    <ul class="catalog-footer__features">
+                                        <li class="features-icon__metres">50 м2</li>
+                                        <li class="features-icon__paint">с отделкой</li>
+                                    </ul>
+                                    <p class="catalog-footer__price">4 012 400 500 ₽</p>
                                 </div>
                             </div>
-                        </div> 
+                        </div>
                     </div>
                     <button class="btn-load">Смотреть больше</button>
             </div>
@@ -376,7 +394,7 @@
             <section class="section-news">
                 <div class="wrapper">
                     <h2 class="title">Наши новости</h2>
-                    <p class="section-country__description">Узнай новости компании первым. Мы всегда остаемся в тренде.</p>
+                    <p class="section-news__description">Узнай новости компании первым. Мы всегда остаемся в тренде.</p>
                     <div class="content">
                         <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
                         <div class="slider">
@@ -390,7 +408,7 @@
                                     <div class="slider-flats"><img src="../img/flats.png" alt="квартиры"></div>
                                 </div>
                             </div>
-                            <div class="slider-child">
+                            <div class="slider-child__flat">
                                 <div class="slider-item slider-hover">
                                     <div class="slider-text">
                                         <p class="slider-text__date">02.04.2020</p>
@@ -400,7 +418,7 @@
                                     <div class="slider-flats"><img src="../img/flats.png" alt="квартиры"></div>
                                 </div>
                             </div>
-                            <div class="slider-child">
+                            <div class="slider-child__flat">
                                 <div class="slider-item slider-hover">
                                     <div class="slider-text">
                                         <p class="slider-text__date">02.04.2020</p>

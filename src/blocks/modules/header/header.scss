@@ -6,9 +6,12 @@
     position: relative;
     &-menu {
         display: flex;
-        padding: 0 234px;
+        padding: 0 179px;
         position: absolute;
         top: 0;
+        @media (max-width:1700px) {
+            padding: 0 130px;
+        }
         @media (max-width:1440px) {
             padding: 0;
         }
@@ -18,7 +21,7 @@
         margin: 0 auto;
         padding-left: 15px;
         padding-right: 15px;
-        padding-top: 170px;
+        padding-top: 264px;
         text-align: center;
     }
     &-item {
