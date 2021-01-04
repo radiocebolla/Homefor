@@ -14,12 +14,13 @@
     justify-content: space-between;
     &-item {
         justify-content: space-between;
-        flex: 0 0 66.4%;
+        flex: 0 0 68%;
+        margin-left: -8px;
         &:last-child {
             display: flex;
             justify-content: flex-end;
-            flex: 0 0 30.4%;
-            margin: -14px -23px;
+            flex: 0 0 33.6%;
+            margin: -14px 0;
         }
     }
     &-nav {
@@ -45,7 +46,7 @@
     &__link {
         text-decoration: none;
         color: $color-primary;
-        padding-right: 48px;
+        padding-right: 47px;
         letter-spacing: -1px;
         &:hover {
             color: black;
@@ -69,6 +70,7 @@
     align-items: center;
     list-style-type: none;
     margin-top: 67px;
+    padding-left: 85px;
     &__link {
         width: 50px;
         height: 50px;
@@ -107,13 +109,42 @@
         }
     }
     &__copy {
+        font-size: $font-size-copyright;
         opacity: 0.5;
+        margin-top: -2px;
     }
     &__text {
+        font-size: $font-size-copyright;
         position: relative;
         color: #59575b;
         opacity: 0.5;
+        margin: -3px -19px 0 0;
     }
 }
 
-
+.box-form-item {
+    .form {
+        display: block;
+        margin-bottom: 14px;
+        padding: 0;
+        &__text {
+            margin-bottom: 11px;
+        }
+        &__input {
+            padding: 21px 328px 18px 30px;
+            border: 1px solid $color-primary;
+        }
+        &__btn {
+            padding: 20px 45px;
+            color: $bg-color;
+            font-size: $font-size-btn;
+            font-weight: 700;
+            text-transform: uppercase;
+            background-color: $color-primary;
+            border: none;
+            margin-left: -4px;
+            margin-bottom: 16px;
+            letter-spacing: 3px;
+        }
+    }
+}
