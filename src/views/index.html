@@ -34,18 +34,16 @@
     <body>
         @@include("../blocks/modules/header/header.html")
         <main>
-
             <section class="section-filter">
                 <div class="wrapper">
                     <div class="dropdown-first">
-
                         <div class="dropdown">
                             <button class="btn my-btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Тип объекта
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                 <a class="dropdown-item" href="#">Загородные дома</a>
-                                <a class="dropdown-item" href="#">Городские квартиры</a>
+                                <a class="dropdown-item disabled" href="#">Городские квартиры</a>
                             </div>
                         </div>
                         <div class="dropdown">
@@ -53,13 +51,11 @@
                                 Район
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Северный</a>
+                                <a class="dropdown-item" href="#">Южный</a>
                             </div>
                         </div>
-
                     </div>
-
                     <div>
                         <form class="form">
                             <label class="filter">
@@ -70,7 +66,7 @@
                                 </div>
                             </label>
                             <label class="filter">
-                                <span class="filter-characteristics__price">Цена за м2</span>
+                                <span class="filter-characteristics__price">Цена&nbsp;за&nbsp;м2</span>
                                 <div class="filter__box">
                                    <input class="filter__input" type="text" name="price" id="price">
                                    <span class="filter__measure">тыс.</span>
@@ -78,7 +74,6 @@
                             </label>
                         </form>
                     </div>
-
                     <div class="filter-slide">
                         <div class="filter-item"> 
                             <div id="slider-range"></div>
@@ -91,163 +86,136 @@
                         </div>
                         <span class="filter-max">98000</span>
                     </div>
-                    
-                <!--    <div>
-                        <div class="slidecontainer">
-                            <input type="range" min="0" max="1000" value="120" class="firstSlider" id="myRangeone">
-                            <p><span id="demoone"></span></p>
-                        </div>
-                        <div class="slidecontainer">
-                            <input type="range" min="0" max="98000" value="10350" class="secondSlider" id="myRangetwo">
-                            <p><span id="demotwo"></span></p>
-                        </div>
-
-                        <div class="container">
-                            <input type="range" min="0" step="1" max="1000" value="0" class="oneslide">
-                            <input type="range" min="0" step="1" max="1000" value="120" class="twoslide">
-                        </div>
-                    </div>-->
-
                     <div class="filter-do">
                         <button class="reset-btn">Сбросить фильтры<span class="close"></span></button>
                         <button class="show-btn">Показать</button>
                     </div>
-
                 </div>
             </section>
             <section class="section-country">
                 <div class="wrapper">
-                        <h2 class="title">Загородные дома</h2>
-                        <p class="section-country__description">Наши дома расположились в уютных районах Екатеринбурга:<br>Верх-Исетский район, Железнодорожный район, Чкаловский район.</p>
-                        <div class="content">
-                            <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
-                            <div class="slider">
-                                <div class="slider-child">
-                                    <div class="slider-item">
-                                        <div class="slider-thumb slider-cowberry">
-                                            <h3 class="slider-thumb__title">Дом “Брусника”</h3>
-                                            <div class="slider-thumb__description">
-                                                <p class="slider-thumb__address">ул. Карла Маркса, 60, Екатеринбург</p>
-                                                <button class="slider-thumb__button" type="button"></button>
-                                            </div>
-                                        </div>
-                                        <div class="slider-footer">
-                                            <ul class="slider-footer__features">
-                                                <li class="features-icon__metres">200 м2</li>
-                                                <li class="features-icon__area">10 сот</li>
-                                                <li class="features-icon__paint">с отделкой</li>
-                                            </ul>
-                                            <p class="slider-footer__price">7 005 456 500 ₽</p>
+                    <h2 class="section-country__title">Загородные дома</h2>
+                    <p class="section-country__description">Наши дома расположились в уютных районах Екатеринбурга:<br>Верх-Исетский район, Железнодорожный район, Чкаловский район.</p>
+                    <div class="content">
+                        <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="slider">
+                            <div class="slider-child">
+                                <div class="slider-item">
+                                    <div class="slider-thumb slider-cowberry">
+                                        <h3 class="slider-thumb__title">Дом “Брусника”</h3>
+                                        <div class="slider-thumb__description">
+                                            <p class="slider-thumb__address">ул. Карла Маркса, 60, Екатеринбург</p>
+                                            <button class="slider-thumb__button" type="button"></button>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="slider-child">
-                                    <div class="slider-item">
-                                        <div class="slider-thumb slider-trand">
-                                            <h3 class="slider-thumb__title">Дом  “Трендис”</h3>
-                                            <div class="slider-thumb__description">
-                                                <p class="slider-thumb__address">ул. Урицкого, 13, Екатеринбург</p>
-                                                <button class="slider-thumb__button" type="button"></button>
-                                            </div>
-                                        </div>
-                                        <div class="slider-footer">
-                                            <ul class="slider-footer__features">
-                                                <li class="features-icon__metres">500 м2</li>
-                                                <li class="features-icon__area">12 сот</li>
-                                                <li class="features-icon__paint">с отделкой</li>
-                                            </ul>
-                                            <p class="slider-footer__price">10 000 234 500 ₽</p>
-                                        </div>
+                                    <div class="slider-footer">
+                                        <ul class="slider-footer__features">
+                                            <li class="features-icon__metres">200 м2</li>
+                                            <li class="features-icon__area">10 сот</li>
+                                            <li class="features-icon__paint">с отделкой</li>
+                                        </ul>
+                                        <p class="slider-footer__price">7 005 456 500 ₽</p>
                                     </div>
                                 </div>
-                                <div class="slider-child">
-                                    <div class="slider-item">
-                                        <div class="slider-thumb slider-panorama">
-                                            <h3 class="slider-thumb__title">Дома  “Панорама”</h3>
-                                            <div class="slider-thumb__description">
-                                                <p class="slider-thumb__address">ул. Толстого, 340, Екатеринбург</p>
-                                                <button class="slider-thumb__button" type="button"></button>
-                                            </div>
-                                        </div>
-                                        <div class="slider-footer">
-                                            <ul class="slider-footer__features">
-                                                <li class="features-icon__metres">150 м2</li>
-                                                <li class="features-icon__area">13 сот</li>
-                                                <li class="features-icon__paint">с отделкой</li>
-                                            </ul>
-                                            <p class="slider-footer__price">5 045 000 500 ₽</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="slider-child">
-                                    <div class="slider-item">
-                                        <div class="slider-thumb slider-cowberry">
-                                            <h3 class="slider-thumb__title">Дом “Брусника”</h3>
-                                            <div class="slider-thumb__description">
-                                                <p class="slider-thumb__address">ул. Карла Маркса, 60, Екатеринбург</p>
-                                                <button class="slider-thumb__button" type="button"></button>
-                                            </div>
-                                        </div>
-                                        <div class="slider-footer">
-                                            <ul class="slider-footer__features">
-                                                <li class="features-icon__metres">200 м2</li>
-                                                <li class="features-icon__area">10 сот</li>
-                                                <li class="features-icon__paint">с отделкой</li>
-                                            </ul>
-                                            <p class="slider-footer__price">7 005 456 500 ₽</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="slider-child">
-                                    <div class="slider-item">
-                                        <div class="slider-thumb slider-trand">
-                                            <h3 class="slider-thumb__title">Дом  “Трендис”</h3>
-                                            <div class="slider-thumb__description">
-                                                <p class="slider-thumb__address">ул. Урицкого, 13, Екатеринбург</p>
-                                                <button class="slider-thumb__button" type="button"></button>
-                                            </div>
-                                        </div>
-                                        <div class="slider-footer">
-                                            <ul class="slider-footer__features">
-                                                <li class="features-icon__metres">500 м2</li>
-                                                <li class="features-icon__area">12 сот</li>
-                                                <li class="features-icon__paint">с отделкой</li>
-                                            </ul>
-                                            <p class="slider-footer__price">10 000 234 500 ₽</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="slider-child">
-                                    <div class="slider-item">
-                                        <div class="slider-thumb slider-panorama">
-                                            <h3 class="slider-thumb__title">Дома  “Панорама”</h3>
-                                            <div class="slider-thumb__description">
-                                                <p class="slider-thumb__address">ул. Толстого, 340, Екатеринбург</p>
-                                                <button class="slider-thumb__button" type="button"></button>
-                                            </div>
-                                        </div>
-                                        <div class="slider-footer">
-                                            <ul class="slider-footer__features">
-                                                <li class="features-icon__metres">150 м2</li>
-                                                <li class="features-icon__area">13 сот</li>
-                                                <li class="features-icon__paint">с отделкой</li>
-                                            </ul>
-                                            <p class="slider-footer__price">5 045 000 500 ₽</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                                <span class="slider__label sr-only"></span>
                             </div>
-                        </div> 
-                </div>
-
-                   <!--<input class="section-country__input" type="range" id="range" min="1" value="1" step="1" />
-                    <div id="slider">
-                        
-                    </div>--> 
-                    
+                            <div class="slider-child">
+                                <div class="slider-item">
+                                    <div class="slider-thumb slider-trand">
+                                        <h3 class="slider-thumb__title">Дом  “Трендис”</h3>
+                                        <div class="slider-thumb__description">
+                                            <p class="slider-thumb__address">ул. Урицкого, 13, Екатеринбург</p>
+                                            <button class="slider-thumb__button" type="button"></button>
+                                        </div>
+                                    </div>
+                                    <div class="slider-footer">
+                                        <ul class="slider-footer__features">
+                                            <li class="features-icon__metres">500 м2</li>
+                                            <li class="features-icon__area">12 сот</li>
+                                            <li class="features-icon__paint">с отделкой</li>
+                                        </ul>
+                                        <p class="slider-footer__price">10 000 234 500 ₽</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-child">
+                                <div class="slider-item">
+                                    <div class="slider-thumb slider-panorama">
+                                        <h3 class="slider-thumb__title">Дома  “Панорама”</h3>
+                                        <div class="slider-thumb__description">
+                                            <p class="slider-thumb__address">ул. Толстого, 340, Екатеринбург</p>
+                                            <button class="slider-thumb__button" type="button"></button>
+                                        </div>
+                                    </div>
+                                    <div class="slider-footer">
+                                        <ul class="slider-footer__features">
+                                            <li class="features-icon__metres">150 м2</li>
+                                            <li class="features-icon__area">13 сот</li>
+                                            <li class="features-icon__paint">с отделкой</li>
+                                        </ul>
+                                        <p class="slider-footer__price">5 045 000 500 ₽</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-child">
+                                <div class="slider-item">
+                                    <div class="slider-thumb slider-cowberry">
+                                        <h3 class="slider-thumb__title">Дом “Брусника”</h3>
+                                        <div class="slider-thumb__description">
+                                            <p class="slider-thumb__address">ул. Карла Маркса, 60, Екатеринбург</p>
+                                            <button class="slider-thumb__button" type="button"></button>
+                                        </div>
+                                    </div>
+                                    <div class="slider-footer">
+                                        <ul class="slider-footer__features">
+                                            <li class="features-icon__metres">200 м2</li>
+                                            <li class="features-icon__area">10 сот</li>
+                                            <li class="features-icon__paint">с отделкой</li>
+                                        </ul>
+                                        <p class="slider-footer__price">7 005 456 500 ₽</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-child">
+                                <div class="slider-item">
+                                    <div class="slider-thumb slider-trand">
+                                        <h3 class="slider-thumb__title">Дом  “Трендис”</h3>
+                                        <div class="slider-thumb__description">
+                                            <p class="slider-thumb__address">ул. Урицкого, 13, Екатеринбург</p>
+                                            <button class="slider-thumb__button" type="button"></button>
+                                        </div>
+                                    </div>
+                                    <div class="slider-footer">
+                                        <ul class="slider-footer__features">
+                                            <li class="features-icon__metres">500 м2</li>
+                                            <li class="features-icon__area">12 сот</li>
+                                            <li class="features-icon__paint">с отделкой</li>
+                                        </ul>
+                                        <p class="slider-footer__price">10 000 234 500 ₽</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-child">
+                                <div class="slider-item">
+                                    <div class="slider-thumb slider-panorama">
+                                        <h3 class="slider-thumb__title">Дома  “Панорама”</h3>
+                                        <div class="slider-thumb__description">
+                                            <p class="slider-thumb__address">ул. Толстого, 340, Екатеринбург</p>
+                                            <button class="slider-thumb__button" type="button"></button>
+                                        </div>
+                                    </div>
+                                    <div class="slider-footer">
+                                        <ul class="slider-footer__features">
+                                            <li class="features-icon__metres">150 м2</li>
+                                            <li class="features-icon__area">13 сот</li>
+                                            <li class="features-icon__paint">с отделкой</li>
+                                        </ul>
+                                        <p class="slider-footer__price">5 045 000 500 ₽</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="slider__label sr-only"></span>
+                        </div>
+                    </div> 
                 </div>
             </section>
             <section class="section-city">
@@ -370,8 +338,6 @@
             <section class="section-plan">
                 <h2 class="title">Генплан</h2>
                 <p class="text-plan">На генплане вы можете посмотреть территорию покупки. В поселке все предусмотрено.<br>Здесь проведены необходимые коммуникации.Это место влюбляет в себя.</p>
-                
-
                 <div class="slider-plan">
                     <div><img src="../img/plan.png" alt=""></div>
                     <div><img src="../img/plan.png" alt=""></div>
@@ -428,24 +394,18 @@
                                     <div class="slider-flats"><img src="../img/flats.png" alt="квартиры"></div>
                                 </div>
                             </div>
-
-
                             <span class="slider__label sr-only"></span>
                         </div>
                     </div> 
-            </div>
+                </div>
             </section>
-            
         </main>
         @@include("../blocks/modules/footer/footer.html")
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-        <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> 
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> 
-
+        <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> 
         <script>
             $('.hero').slick({
                 arrows:false,
@@ -453,48 +413,6 @@
             }
             );
         </script>
-
-        <script>
-            var firstSlider = document.getElementById("myRangeone");
-            var output = document.getElementById("demoone");
-            output.innerHTML = firstSlider.value; // Display the default slider value
-
-            // Update the current slider value (each time you drag the slider handle)
-            firstSlider.oninput = function() {
-                output.innerHTML = this.value;
-            }
-            
-            var secondSlider = document.getElementById("myRangetwo");
-            var output = document.getElementById("demotwo");
-            output.innerHTML = secondSlider.value; // Display the default slider value
-
-            // Update the current slider value (each time you drag the slider handle)
-            secondSlider.oninput = function() {
-                output.innerHTML = this.value;
-            }
-        </script>
-        <script>
-            const sliders = document.querySelectorAll('input[type="range"]');
-
-            sliders[0].addEventListener('input', (e) => {
-            if(+sliders[0].value > +sliders[1].value){
-                sliders[1].value = +sliders[0].value;
-            }
-            });
-
-            sliders[1].addEventListener('input', (e) => {
-            if(+sliders[1].value < +sliders[0].value){
-                sliders[0].value = +sliders[1].value;
-            }
-            });
-
-            sliders.forEach((slider) => {
-            slider.addEventListener('change', () => {
-                console.log(`from ${sliders[0].value} to ${sliders[1].value}`);
-            })
-            });
-        </script>
-
         <script>//filter
               $( function() {
                 $( "#slider-range" ).slider({
@@ -521,10 +439,9 @@
                 }
                 });
                 $( "#amount-two" ).val( " " + $( "#slider-range-two" ).slider( "values", 0 ) +
-                "                                    " + $( "#slider-range-two" ).slider( "values", 1 ) );
+                "                               " + $( "#slider-range-two" ).slider( "values", 1 ) );
             } );
         </script>
-
         <script>
             $(document).ready(function() {
                 var $slider = $('.slider');
@@ -545,7 +462,35 @@
                     slidesToShow: 3,
                     slidesToScroll: 1,
                     speed: 400,
-                    arrows:true
+                    arrows:true,
+
+                    responsive: [
+                    {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                        arrows: true,
+                        dots: false
+                    }
+                    },
+                    {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                    },
+                    {
+                    breakpoint: 320,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        arrows: false,
+                        dots: true
+                    }
+                    }
+                ]
                 });  
             });
         </script>
@@ -557,7 +502,6 @@
             }
             );
         </script>
-
         <script src="js/main.js"></script>
         <script src="js/vendor.js"></script>
     </body>

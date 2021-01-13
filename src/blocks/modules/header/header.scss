@@ -9,6 +9,9 @@
         padding: 0 179px;
         position: absolute;
         top: 0;
+        @media (max-width:1920px) {
+            padding-left: 237px;
+        }
         @media (max-width:1700px) {
             padding: 0 130px;
         }
@@ -32,6 +35,9 @@
         &:first-child {
             margin-left: 10px;
             margin-right: 136px;
+            @media (max-width:1200px) {     
+                margin-right: 157px;
+            }
         }
         &__place {
             &::before {
@@ -42,6 +48,18 @@
             }
         }
         &__tel {
+            @media (max-width:320px) {
+                text-indent: -9999px;
+                width: 2.5rem;
+                height: 2.5rem;
+                background-color: $bg-color;
+                border: none;
+                background-image: url(data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAe1BMVEUwLTIwLTIwLTIwLTIwLTIwLTIwLTIwLTIwLTIwLTIwLTIwLTIwLTIwLTIwLTIwLTIwLTIwLTIwLTIwLTIwLTIwLTIwLTIwLTIwLTIwLTIwLTIwLTIwLTIwLTIwLTIwLTIwLTIwLTIwLTIwLTIwLTIwLTIwLTIwLTIAAACCR5bqAAAAJ3RSTlMAY/L1GW3D5/4au0l3Ah9fr+APKvu6BoK5DgFBFgO93Vn9aMuBKWCjRC9SAAAAAWJLR0QovbC1sgAAAAlwSFlzAAALEgAACxIB0t1+/AAAAAd0SU1FB+UBDRMyOwdMcYAAAAB4SURBVBjTVc7ZEoIwDAXQWBTKJlioimLZhPz/H9LFMSFvOXNvJnASiNEZaOyOeGHgdowZJA5kSpD5SE5Q+EpJcJUWKnYDags3xaBpreg7k4e78uzg9e4DfIyTYdQ4mdmbWvA/wmeUIfm1vu0RANZaskr4sMgSFNsOEQUPlXNAUdEAAAAASUVORK5CYII=);
+                border-radius: 100%;
+                background-size: 1rem 0.87rem;
+                background-repeat: no-repeat;
+                background-position: center center;
+            }
             &::before {
                 content: url(data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAABM0lEQVQ4jZ2Tu0oDQRiFvyQQKwUT1MoHUIyVIARURLCwN0jeIWArvoVNLHwJG+0tBEsvpFWsxGARrbzAkUl2IcSZf505MMXuGb4Z/nMGSQ1Jd/qrE0mkLAJAp4GkqRRoGWjg1wywG/BMOeiXsaGVAi1JegYWA/47MA98xt60Z/huBBtx9xxBrw1/ADykQC8M/xB4iYWWhr0ajWBpwvsA5mLnmd/UqevxpoGjWOBQWWGrrgWeB/AjaTu2/OMfB8bLWk2FunVugLcm9tYlNSVViqA1SY8B8Lek42xU+5L62f9XSaeSdvID8vTHtQJcAbOBGN6AesDrA2c+qNM6cGmATZUD5g2wCTylQIuSrBnhBfXfmri6+XrsVUypXeodSb0C5m0oqCKtAXtAE1gGFoAqcA+0fwE96qemVgAOlwAAAABJRU5ErkJggg==);
                 width: 21px;
@@ -55,6 +73,9 @@
         font-weight: 700;
         color: $bg-color;
         margin-bottom: 32px;
+        @media (max-width:1200px) {
+            font-size: 58px;
+        }
     }
     &__text {
         font-size: $base-font-size;
@@ -74,10 +95,12 @@
         transition: 0.2s ease;
         border: none;
         &:hover {
-            background-color: $color-secondary;
-            color: $bg-color;
+            color: $color-secondary;
         }
-}
+        &:focus {
+            outline: 0;
+        }
+    }
 }
 
 .hero {
@@ -99,8 +122,17 @@
     list-style-type: none;
     display: flex;
     justify-content: space-between;
+    @media (max-width:1200px) {
+        padding-top: 7px;
+    }
+    @media (max-width:990px) {
+        display: none;
+    }
     &-item {
         margin-right: 48px;
+        @media (max-width:1200px) {
+            margin-right: 18px;
+        }
     }
     &-link {
         font-size: $base-font-size;
@@ -109,6 +141,9 @@
         color: $bg-color;
         transition: 0.3s ease;
         padding: 0;
+        @media (max-width:1200px) {
+            font-size: 14px;
+        }
         &:hover {
             color: $color-secondary;
         }
@@ -116,6 +151,9 @@
     &-icon {
         &:last-child {
             margin-left: 61px;
+            @media (max-width:1200px) {
+                margin-left: 38px;
+            }
         }
     }
 }
@@ -136,6 +174,31 @@
     margin-left: 30px;
     margin-right: 74px;
     margin-top: 16px;
+    @media (max-width:1200px) {
+        margin-left: 24px;
+        margin-right: 26px;
+        margin-top: 12px;
+    }
+    &:hover {
+        background-color: transparent;
+        border: none;
+        margin-left: 30px;
+        margin-right: 74px;
+        margin-top: 16px;
+        .burger-line {
+            width: 40px;
+            height: 1px;
+            background-color: $color-secondary;
+            margin: 8px 0;
+            transition: 0.3s ease;
+            &:nth-child(2) {
+                width: 25px;
+            }
+        }
+    }
+    &:focus {
+        outline: 0;
+    }
     &-line {
         width: 40px;
         height: 1px;
@@ -143,12 +206,6 @@
         margin: 8px 0;
         &:nth-child(2) {
             width: 25px;
-        }
-        &:hover {
-            background-color: $color-secondary;
-            width: 40px;
-            height: 1px;
-            margin: 8px 0;
         }
     }
 }
@@ -160,6 +217,7 @@
     text-indent: -9999px;
     margin-top: -55px;
     position: relative;
+    cursor: pointer;
     @media (max-width:320px) {
         margin-top: 19px;
         align-items: center;
