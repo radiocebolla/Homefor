@@ -2,16 +2,31 @@
     border-top: 2px solid #676569;
     padding-top: 64px;
     padding-bottom: 60px;
+    @media (max-width:320px) {
+        padding-top: 29px
+    }
     .logo {
         width: 140px;
         height: 23px;
         background-color: transparent;
+        @media (max-width:320px) {
+            margin-bottom: 27px;
+        }
+        &-img {
+            @media (max-width:320px) {
+                margin-left: -52px;
+                width: 97px;
+            }
+        }
     }
 }
 
 .box-footer {
     display: flex;
     justify-content: space-between;
+    @media (max-width:320px) {
+        display: block;
+    }
     &-item {
         justify-content: space-between;
         flex: 0 0 68%;
@@ -25,6 +40,11 @@
     }
     &-nav {
         display: flex;
+        @media (max-width:320px) {
+            flex-wrap: wrap;
+            width: 90%;
+            margin-left: 46px
+        }
     }
 }
 
@@ -36,11 +56,20 @@
     @media (max-width:1200px) {
         padding-left: 29px;
     }
+    @media (max-width:320px) {
+        flex-wrap: wrap;
+        padding-left: 0;
+    }
     &__item {
         margin-bottom: 1.62rem;
         font-size: 1.12rem;
         @media (max-width:1200px) {
             font-size: 14px;
+        }
+        @media (max-width:320px) {
+            font-size: $font-size-features;
+            padding-right: 64px;
+            margin-bottom: 13px;
         }
         &:hover {
             color: $color-primary;
@@ -57,6 +86,9 @@
         @media (max-width:1200px) {
             padding-right: 30px;
         }
+        @media (max-width:320px) {
+            padding-right: 0;
+        }
         &:hover {
             color: $color-primary;
             text-decoration: none;
@@ -68,6 +100,9 @@
         margin-bottom: 2.06rem;
         text-decoration: none;
         color: $color-primary;
+        @media (max-width:320px) {
+            font-size: $font-size-btn;
+        }
         &:hover {
             color: $color-secondary;
             text-decoration: none;
@@ -115,6 +150,9 @@
     margin-top: 42px;
     color: $color-primary;
     font-size: $font-size-copyright;
+    @media (max-width:320px) {
+        font-size: 10px;
+    }
     &__link {
         text-decoration: none;
         transition: 0.2s ease;
@@ -129,11 +167,17 @@
     &__copy {
         margin-top: -2px;
         color: rgba(48, 45, 50, 0.5);
+        @media (max-width:990px) {
+            margin-left: -7px;
+        }
     }
     &__text {
         position: relative;
         margin: -3px -19px 0 0;
         color: rgba(48, 45, 50, 0.5);
+        @media (max-width:990px) {
+            margin: -3px -10px 0 0;
+        }
     }
 }
 
@@ -146,6 +190,9 @@
             margin: 0 0px 14px;
         }
         &__text {
+            @media (max-width:320px) {
+                font-size: $font-size-features;
+            }
             margin-bottom: 11px;
         }
         &__input {
@@ -153,6 +200,9 @@
             border: 1px solid $color-primary;
             @media (max-width:1200px) {
                 padding: 21px 172px 18px 30px;
+            }
+            @media (max-width:320px) {
+                font-size: $font-size-features;
             }
             &:focus {
                 outline: none;
@@ -170,6 +220,13 @@
             margin-left: -4px;
             margin-bottom: 16px;
             letter-spacing: 3px;
+            @media (max-width:320px) {
+                font-size: 14px;
+                padding: 17px 32px;
+                margin-left: 55px;
+                margin-top: 40px;
+                margin-bottom: 10px;
+            }
             &:focus {
                 outline: none;
             }
